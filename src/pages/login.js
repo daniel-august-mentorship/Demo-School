@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import "./pages.css";
 
 function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [Error, setError] = useState(false);
+
+  const handleLogin = () => {
+    if (username === "" || password === "") {
+      setError(true);
+    } else {
+      alert("welcome");
+    }
+  };
+
   return (
     <div className="page">
       <div className="titleWrap">Login</div>
       <div className="contentWrap">
         <div className="inputWrap">
-          <input type="text" className="input" placeholder="User name" />
+          <input
+            type="text"
+            value={username}
+            className="input"
+            placeholder="User name"
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </div>
         <br />
         <div className="inputWrap">
-          <input type="password" className="input" placeholder="Password" />
+          <input
+            type="password"
+            value={password}
+            className="input"
+            placeholder="Password"
+          />
         </div>
         <br />
       </div>
-      <Button variant="primary" size="lg">
+      {Error && (
+        <Alert variant="warning">Username and password are required.</Alert>
+      )}
+      <Button variant="primary" size="lg" onClick={handleLogin}>
         Submit
       </Button>{" "}
       <br />
