@@ -27,6 +27,9 @@
 .App-link {
   color: #61dafb;
 }
+.input::placeholder {
+  color: #dadada;
+}
 
 @keyframes App-logo-spin {
   from {
