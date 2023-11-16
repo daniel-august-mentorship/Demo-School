@@ -6,13 +6,17 @@ import "./pages.css";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [Error, setError] = useState(false);
+  const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleLogin = () => {
     if (username === "" || password === "") {
       setError(true);
-    } else {
+    } else if (username === "test" && password === "test") {
       alert("welcome");
+    } else {
+      setError(false);
+      alert("Invalid credentials");
     }
   };
 
@@ -36,11 +40,12 @@ function Login() {
             value={password}
             className="input"
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <br />
       </div>
-      {Error && (
+      {error && (
         <Alert variant="warning">Username and password are required.</Alert>
       )}
       <Button variant="primary" size="lg" onClick={handleLogin}>
