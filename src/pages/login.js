@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import { Alert } from "react-bootstrap";
 import "./pages.css";
 
 function Login() {
@@ -47,11 +48,6 @@ function Login() {
       </Button>{" "}
       <br />
       <br />
-      {/* <div className="d-grid gap-2">
-        <Button variant="primary" size="lg">
-          Submit
-        </Button>
-      </div> */}
     </div>
   );
 }
