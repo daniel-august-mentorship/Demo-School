@@ -1,11 +1,9 @@
 import React from "react";
 import "./card.css";
 import { SlLogin } from "react-icons/sl";
+import Stack from "react-bootstrap/Stack";
 
-function Card() {
-  const content = 150;
-  const label = " Since Last Month";
-
+function Card({ title, content, label }) {
   const getArrowDirection = () => {
     return content >= 150 ? "up" : "down";
   };
@@ -15,21 +13,21 @@ function Card() {
   };
 
   return (
-    <div className="cardWrap">
+    <Stack gap={3}>
       <div className="cardArea">
-        <div className="cardTitle">
-          Daily Logins
-          <SlLogin className="icon" size="25" color="#134F5C" />
+        <div className="cardTitle d-flex justify-content-between p-2">
+          {title}
+          <SlLogin className="icon" />
         </div>
-        <div className="cardContent">{content}</div>
+        <div className="cardContent p-2">{content}</div>
         <div className="arrowWrap">
           <div className="cardArrow" style={{ color: getArrowColor() }}>
-            {getArrowDirection() === "up" ? "↑ 20%" : "↓ 20%"}
+            {getArrowDirection() === "up" ? "↑20%" : "↓20%"}
           </div>
           <div className="cardLabel">{label}</div>
         </div>
       </div>
-    </div>
+    </Stack>
   );
 }
 
