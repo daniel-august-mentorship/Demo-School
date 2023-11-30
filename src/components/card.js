@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
+import { Card as BsCard } from "react-bootstrap/";
 import { SlLogin } from "react-icons/sl";
-import Stack from "react-bootstrap/Stack";
 
 function Card({ title, content, label }) {
   const getArrowDirection = () => {
@@ -13,21 +13,19 @@ function Card({ title, content, label }) {
   };
 
   return (
-    <Stack gap={3}>
-      <div className="cardArea">
-        <div className="cardTitle d-flex justify-content-between p-2">
-          {title}
-          <SlLogin className="icon" />
+    <BsCard.Body className="cardArea">
+      <BsCard.Title className="cardTitle d-flex justify-content-between p-2">
+        {title}
+        <SlLogin className="icon" />
+      </BsCard.Title>
+      <BsCard.Text className="cardContent p-2">{content}</BsCard.Text>
+      <BsCard.Text className="arrowWrap">
+        <div className="cardArrow" style={{ color: getArrowColor() }}>
+          {getArrowDirection() === "up" ? "↑20%" : "↓20%"}
         </div>
-        <div className="cardContent p-2">{content}</div>
-        <div className="arrowWrap">
-          <div className="cardArrow" style={{ color: getArrowColor() }}>
-            {getArrowDirection() === "up" ? "↑20%" : "↓20%"}
-          </div>
-          <div className="cardLabel">{label}</div>
-        </div>
-      </div>
-    </Stack>
+        <div className="cardLabel">{label}</div>
+      </BsCard.Text>
+    </BsCard.Body>
   );
 }
 
