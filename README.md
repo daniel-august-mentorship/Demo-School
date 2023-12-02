@@ -17,4 +17,5 @@ We will create a demo application together. In this demo, you will try to learn 
 * We will add a `Roster` tavble on the bottom right.
 
 #### Mockup
-<img width="1119" alt="image" src="https://github.com/daniel-august-mentorship/Demo-School/assets/6497134/91d3076f-472d-4431-8ae8-992510a0edd4">
+<img width="949" alt="image" src="https://github.com/daniel-august-mentorship/Demo-School/assets/6497134/4c34d7f5-07fe-41ca-8cfc-64ecd3a466b7">
+
