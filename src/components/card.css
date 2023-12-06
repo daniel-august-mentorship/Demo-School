@@ -1,0 +1,48 @@
+.cardArea {
+  display: block;
+  width: 275px;
+  height: 170px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: white;
+  position: relative;
+}
+.cardTitle {
+  color: #666666;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: left;
+}
+.icon {
+  position: relative;
+  align-items: right;
+  font-size: 30px;
+  color: #134f5c;
+}
+.cardContent {
+  display: flex;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  flex-direction: column;
+}
+.arrowWrap {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+}
+.cardArrow {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+.cardLabel {
+  position: relative;
+  left: 20px;
+  color: #666666;
+  font-size: 18px;
+}
