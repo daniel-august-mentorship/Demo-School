@@ -9,14 +9,16 @@
   position: relative;
 }
 .cardTitle {
+  display: flex;
   color: #666666;
   padding-top: 10px;
   padding-left: 10px;
   text-align: left;
+  justify-content: space-between;
 }
 .icon {
   position: relative;
-  align-items: right;
+  align-items: left;
   font-size: 30px;
   color: #134f5c;
 }
@@ -29,6 +31,7 @@
   font-weight: bold;
   flex-direction: column;
 }
+
 .arrowWrap {
   display: flex;
   position: absolute;
@@ -45,4 +48,9 @@
   left: 20px;
   color: #666666;
   font-size: 18px;
+}
+.cardLabel p {
+  padding-left: 20px;
+  font-size: 15px;
+  font-weight: lighter;
 }
