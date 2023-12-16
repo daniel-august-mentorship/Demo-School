@@ -8,20 +8,19 @@
   background-color: white;
   position: relative;
 }
+
 .cardTitle {
-  display: flex;
   color: #666666;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
   text-align: left;
-  justify-content: space-between;
 }
+
 .icon {
-  position: relative;
-  align-items: left;
   font-size: 30px;
   color: #134f5c;
 }
+
 .cardContent {
   display: flex;
   padding-left: 10px;
@@ -37,20 +36,23 @@
   position: absolute;
   bottom: 20px;
 }
+
 .cardArrow {
   padding-left: 10px;
   text-align: left;
   font-size: 18px;
   font-weight: bold;
 }
+
 .cardLabel {
   position: relative;
   left: 20px;
   color: #666666;
   font-size: 18px;
 }
+
 .cardLabel p {
-  padding-left: 20px;
   font-size: 15px;
   font-weight: lighter;
+  text-align: left;
 }

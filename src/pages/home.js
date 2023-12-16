@@ -1,3 +1,5 @@
+// home.js
+
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -12,30 +14,38 @@ function Home() {
       <Col>
         <Card
           title="Daily Logins"
-          content={150}
-          label="Since Last Month"
-          isPositive={false}
+          content={"150"}
+          footer={{
+            isPositive: false,
+            label: "Since Last Month",
+          }}
           icon={<SlLogin />}
         />
       </Col>
       <Col>
         <Card
           title="Activities Completed"
-          content={2000}
-          label="Since January"
-          isPositive={true}
+          content={"2,000"}
+          footer={{
+            isPositive: true,
+            label: "Since January",
+          }}
           icon={<FaChartLine />}
         />
       </Col>
       <Col>
         <Card
-          label={
-            <p>
-              The next scheduled test is on
-              <span style={{ fontWeight: "bold" }}>Jan 03, 2024</span>.<br />
-              Let's prepare for it
-            </p>
-          }
+          footer={{
+            label: (
+              <p>
+                The next scheduled test
+                <br />
+                is on <span style={{ fontWeight: "bold" }}>Jan 03, 2024</span>.
+                <br />
+                Let's prepare for it
+              </p>
+            ),
+          }}
           icon={<FcFile />}
         />
       </Col>
