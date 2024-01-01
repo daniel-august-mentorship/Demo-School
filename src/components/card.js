@@ -30,9 +30,9 @@ function Card({ title, content, footer, icon }) {
       <BsCard.Text className="cardContent p-2">{content}</BsCard.Text>
       {footer && (
         <BsCard.Text className="arrowWrap">
-          {footer.isPositive !== undefined && (
+          {footer.isPositive !== undefined && footer.label && (
             <div className="cardArrow" style={{ color: arrowAndColor.color }}>
-              {arrowAndColor.arrow} {footer.isPositive ? "10%" : "20%"}
+              {arrowAndColor.arrow} {footer.growth + "%"}
             </div>
           )}
           {footer.label && <div className="cardLabel">{footer.label}</div>}
