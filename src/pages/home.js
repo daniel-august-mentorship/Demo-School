@@ -1,12 +1,13 @@
 import React from "react";
-import Stack from "react-bootstrap/Stack";
-import Card from "../components/card";
+
+import { Container } from "react-bootstrap";
+import Overview from "../components/overview";
 
 function Home() {
   return (
-    <Stack gap={3}>
-      <Card title="Daily Logins" content={150} label=" Since Last Month" />
-    </Stack>
+    <Container>
+      <Overview />
+    </Container>
   );
 }
 

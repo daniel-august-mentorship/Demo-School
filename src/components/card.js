@@ -1,30 +1,43 @@
 import React from "react";
 import "./card.css";
-import { Card as BsCard } from "react-bootstrap/";
-import { SlLogin } from "react-icons/sl";
+import { Card as BsCard, Row, Col } from "react-bootstrap/";
 
-function Card({ title, content, label }) {
-  const getArrowDirection = () => {
-    return content >= 150 ? "up" : "down";
+function Card({ title, content, footer, icon }) {
+  const getArrowAndColor = () => {
+    return footer?.isPositive
+      ? {
+          color: "#009E0F",
+          arrow: "↑",
+        }
+      : {
+          color: "#CC0000",
+          arrow: "↓",
+        };
   };
 
-  const getArrowColor = () => {
-    return getArrowDirection() === "up" ? "#009E0F" : "#CC0000";
-  };
+  const arrowAndColor = getArrowAndColor();
 
   return (
     <BsCard.Body className="cardArea">
-      <BsCard.Title className="cardTitle d-flex justify-content-between p-2">
-        {title}
-        <SlLogin className="icon" />
-      </BsCard.Title>
+      <Row>
+        <Col xs={8} className="cardTitle">
+          {title && <div>{title}</div>}
+        </Col>
+        <Col xs={4}>
+          <div className="icon">{icon}</div>
+        </Col>
+      </Row>
       <BsCard.Text className="cardContent p-2">{content}</BsCard.Text>
-      <BsCard.Text className="arrowWrap">
-        <div className="cardArrow" style={{ color: getArrowColor() }}>
-          {getArrowDirection() === "up" ? "↑20%" : "↓20%"}
-        </div>
-        <div className="cardLabel">{label}</div>
-      </BsCard.Text>
+      {footer && (
+        <BsCard.Text className="arrowWrap">
+          {footer.isPositive !== undefined && footer.label && (
+            <div className="cardArrow" style={{ color: arrowAndColor.color }}>
+              {arrowAndColor.arrow} {footer.growth + "%"}
+            </div>
+          )}
+          {footer.label && <div className="cardLabel">{footer.label}</div>}
+        </BsCard.Text>
+      )}
     </BsCard.Body>
   );
 }
