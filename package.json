@@ -38,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-methods": "^7.18.6"
   }
 }

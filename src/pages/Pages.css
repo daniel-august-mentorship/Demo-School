@@ -48,3 +48,10 @@
   font-size: 14px;
   font-weight: 400;
 }
+.nav-button {
+  color: darkgray;
+  background-color: white;
+  position: absolute;
+  left: 77px;
+  border: none;
+}

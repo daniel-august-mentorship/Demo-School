@@ -16,19 +16,19 @@ function LeftNavigation({ show, onHide }) {
       <Offcanvas.Body>
         <Nav defaultActiveKey="/home" className="flex-column">
           <Nav.Link href="/home">
-            <FaHouseChimney style={{ fontSize: "35px" }} />
+            <FaHouseChimney className="nav-icon" />
             Home
           </Nav.Link>
           <Nav.Link as={Link} to="/classes">
-            <HiUserGroup style={{ fontSize: "35px" }} />
+            <HiUserGroup className="nav-icon" />
             Classes
           </Nav.Link>
           <Nav.Link as={Link} to="/students">
-            <FaUserFriends style={{ fontSize: "35px" }} />
+            <FaUserFriends className="nav-icon" />
             Students
           </Nav.Link>
           <Nav.Link as={Link} to="/reports">
-            <BsFillFileEarmarkBarGraphFill style={{ fontSize: "35px" }} />
+            <BsFillFileEarmarkBarGraphFill className="nav-icon" />
             Reports
           </Nav.Link>
         </Nav>

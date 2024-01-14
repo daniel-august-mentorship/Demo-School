@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import LeftNavigation from "../components/left-navigation";
 import Overview from "../components/overview";
+import { FaBarsStaggered } from "react-icons/fa6";
+import "./pages.css";
 
 function Home() {
   const [showNav, setShowNav] = useState(false);
@@ -10,12 +12,10 @@ function Home() {
 
   return (
     <Container>
-      <LeftNavigation show={showNav} s onHide={handleClose} />
-
-      <button className="btn btn-primary" onClick={handleShow}>
-        Where is this button position?
+      <LeftNavigation show={showNav} onHide={handleClose} />
+      <button className="nav-button" onClick={handleShow}>
+        <FaBarsStaggered />
       </button>
-
       <Overview />
     </Container>
   );

@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   color: white !important;
-  font-size: 15px !important;
+  font-size: 20px !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 15px !important;
 }
 
 .nav-link > * {
   margin-right: 20px;
+  font-size: 35px;
 }
