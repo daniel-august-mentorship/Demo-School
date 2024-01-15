@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./pages/login";
 import Home from "./pages/home";
-import Classes from "./components/classes";
-import Students from "./components/students";
-import Reports from "./components/reports";
+import Classes from "./data/classes";
+import Students from "./data/students";
+import Reports from "./data/reports";
 
 function App() {
   return (

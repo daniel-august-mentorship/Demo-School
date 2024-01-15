@@ -17,3 +17,10 @@
   margin-right: 20px;
   font-size: 35px;
 }
+.nav-button {
+  color: darkgray !important;
+  background-color: white !important;
+  position: absolute;
+  left: 77px;
+  border: none !important;
+}
