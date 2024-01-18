@@ -1,0 +1,26 @@
+.offcanvas {
+  background-color: #082035 !important;
+  width: 230px !important;
+  color: white !important;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: white !important;
+  font-size: 20px !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 15px !important;
+}
+
+.nav-link > * {
+  margin-right: 20px;
+  font-size: 35px;
+}
+.nav-button {
+  color: darkgray !important;
+  background-color: white !important;
+  position: absolute;
+  left: 77px;
+  border: none !important;
+}

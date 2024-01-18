@@ -1,15 +1,14 @@
+import React from "react";
 import { Container } from "react-bootstrap";
-import Overview from "../components/overview";
-import "../components/navigation.css";
 import NavigationBar from "../components/navigationBar";
 
-function Home() {
+function Classes() {
   return (
     <Container>
       <NavigationBar />
-      <Overview />
+      <h2>Classes Page</h2>
     </Container>
   );
 }
 
-export default Home;
+export default Classes;
