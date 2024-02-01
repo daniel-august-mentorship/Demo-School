@@ -3,6 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import LeftNavigation from "./left-navigation";
 import { FaBarsStaggered } from "react-icons/fa6";
 import "./navigation.css";
+import TopNavigation from "./top-navigation";
 
 function NavigationBar() {
   const [showNav, setShowNav] = useState(false);
@@ -11,6 +12,7 @@ function NavigationBar() {
 
   return (
     <Container>
+      <TopNavigation />
       <LeftNavigation show={showNav} onHide={handleClose} />
       <Button className="nav-button" onClick={handleShow}>
         <FaBarsStaggered />

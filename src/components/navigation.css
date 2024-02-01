@@ -24,3 +24,19 @@
   left: 77px;
   border: none !important;
 }
+.nav-bar {
+  height: 50px !important;
+  background-color: none !important;
+}
+.tnav-link {
+  color: black !important;
+  padding-top: 20px !important;
+}
+
+.dropdown-toggle {
+  padding-top: 35px !important;
+  color: black !important;
+}
+.userinfo {
+  font-size: 15px !important;
+}
